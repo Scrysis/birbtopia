@@ -1,0 +1,55 @@
+const { Birb, User } = require("../models")
+const userController = require("./userController")
+
+
+module.exports = {
+    async findAllUsers(req, res) {
+        try {
+            const users = await User.find().populate("birbs").exec()
+            res.json(users)
+        } catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    },
+
+    async createUser(req, res) {
+        try {
+            const user = await User.create(req.body)
+            res.json(user)
+        } catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    },
+
+    async updateBirb(req, res) {
+        try {
+            const updatedBirb = await Birb.updateOne({
+                _id: req.params.userId,
+            }, {
+                $set: {
+                    birbName: req.body.name
+                }
+            })
+            res.json(updatedBirb)
+        } catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+
+    },
+
+    async releaseBirb(req, res) {
+        try {
+            const deletedBirb = await User.deleteOne({
+                _id: req.params.username
+            })
+            res.json({deletedBirb})
+        } catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    },
+
+}
