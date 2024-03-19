@@ -1,4 +1,4 @@
-const {Schema, Model} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 
 const birbSchema = new Schema ({
@@ -43,6 +43,6 @@ const birbSchema = new Schema ({
 });
 
 
-const Birb = model("birb", birbSchema);
+const Birb = model("Birb", birbSchema);
 
 module.exports = Birb;

@@ -1,9 +1,9 @@
-const { Birb, User } = require("../models")
+const { Birb, User } = require("../server/models")
 
 module.exports = {
     async findAllUsers(req, res) {
         try {
-            const users = await User.find().populate("birbs").exec()
+            const users = await User.find().populate("birbArray").exec()
             res.json(users)
         } catch (err) {
             console.log(err)
@@ -23,9 +23,9 @@ module.exports = {
 
     async findUser(req, res) {
         try {
-            const user = await User.findById({
-                _id: req.params.userId
-            }).populate("birbs").exec()
+            const user = await User.findOne({
+                username: req.params.username
+            }).populate("birbArray").exec()
             res.json(user)
         } catch (err) {
             console.log(err)
@@ -36,7 +36,7 @@ module.exports = {
     async updateUser(req, res) {
         try {
             const updatedUser = await User.updateOne({
-                _id: req.params.userId,
+                username: req.params.username,
             }, {
                 $set: {
                     email: req.body.email,
@@ -53,18 +53,14 @@ module.exports = {
 
     async deleteUser(req, res) {
         try {
-            const user = await User.findById({
-                _id: req.params.userId
+            const user = await User.findOne({
+                username: req.params.username
             })
             const birbs = await Birb.deleteMany({
-                $or: [{
-                    username: user?.username
-                }, {
-                    _id: {$in: user?.birbs}
-                }]
+               _id: {$in: user?.birbArray}
             })
             const deletedUser = await User.deleteOne({
-                _id: req.params.userId
+                username: req.params.username
             })
             res.json({birbs, deletedUser})
         } catch (err) {

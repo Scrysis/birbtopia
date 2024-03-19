@@ -1,21 +1,39 @@
-const { Birb, User } = require("../models")
+const { Birb, User } = require("../server/models")
 const userController = require("./userController")
 
 module.exports = {
     async getBirbs(req, res) {
         try {
-            const users = await User.find().populate("birbs").exec()
-            res.json(users)
+            const birbs = await Birb.find()
+            res.json(birbs)
         } catch (err) {
             console.log(err)
             res.status(500).json(err)
         }
     },
 
-    async assignBirb(req, res) {
+    async getBirb(req, res) {
+        try {
+            const birb = await Birb.findOne({
+                _id: req.params.birbId
+            })
+            res.json(birb)
+        } catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    },
+
+    // create birb and then assign to user birbArray
+    async createBirb(req, res) {
         try {
             const birb = await Birb.create(req.body)
-            res.json(birb)
+            const user = User.updateOne({
+                username: req.params.username,
+            }, {
+                $push: { birbArray: birb._id }
+            }).exec()
+            res.json({birb})
         } catch (err) {
             console.log(err)
             res.status(500).json(err)
@@ -25,10 +43,10 @@ module.exports = {
     async updateBirb(req, res) {
         try {
             const updatedBirb = await Birb.updateOne({
-                _id: req.params.userId,
+                _id: req.params.birbId,
             }, {
                 $set: {
-                    birbName: req.body.name
+                    birbname: req.body.name
                 }
             })
             res.json(updatedBirb)
@@ -41,8 +59,8 @@ module.exports = {
 
     async releaseBirb(req, res) {
         try {
-            const deletedBirb = await User.deleteOne({
-                _id: req.params.username
+            const deletedBirb = await Birb.deleteOne({
+                _id: req.params.birbId
             })
             res.json({deletedBirb})
         } catch (err) {
