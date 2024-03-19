@@ -1,9 +1,8 @@
 const { Birb, User } = require("../models")
 const userController = require("./userController")
 
-
 module.exports = {
-    async findAllUsers(req, res) {
+    async getBirbs(req, res) {
         try {
             const users = await User.find().populate("birbs").exec()
             res.json(users)
@@ -13,10 +12,10 @@ module.exports = {
         }
     },
 
-    async createUser(req, res) {
+    async assignBirb(req, res) {
         try {
-            const user = await User.create(req.body)
-            res.json(user)
+            const birb = await Birb.create(req.body)
+            res.json(birb)
         } catch (err) {
             console.log(err)
             res.status(500).json(err)

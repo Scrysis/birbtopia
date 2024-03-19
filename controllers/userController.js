@@ -1,6 +1,5 @@
 const { Birb, User } = require("../models")
 
-
 module.exports = {
     async findAllUsers(req, res) {
         try {
