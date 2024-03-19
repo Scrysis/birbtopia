@@ -15,4 +15,3 @@ module.exports = {
         return jwt.sign({ data: info}, secret, { expires: expiration });
     },
 };
-
