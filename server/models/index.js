@@ -1,4 +1,4 @@
 const User = require("./User");
 const Birb = require("./Birb");
 
-module.exports = {user,birb};
+module.exports = {User,Birb};
