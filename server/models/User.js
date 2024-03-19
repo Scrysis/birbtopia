@@ -27,7 +27,7 @@ const userSchema = new Schema({
     required: true,
     minLength: [8],
   },
-  birbArray: [Number],
+  birbArray: [{type: Schema.Types.ObjectId, ref: "birb"}],
 });
 
 userSchema.pre("save", async function (next) {
