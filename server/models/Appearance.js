@@ -12,6 +12,6 @@ const appearanceSchema = new Schema({
 });
 
 
-const Appearance = model("appearance", appearanceSchema);
+const Appearance = Model("appearance", appearanceSchema);
 
 module.exports = Appearance;

@@ -45,6 +45,6 @@ const birbSchema = new Schema ({
 
 
 
-const Birb = model("birb", birbSchema);
+const Birb = Model("birb", birbSchema);
 
 module.exports = Birb;
