@@ -5,7 +5,7 @@ const secret = 'beepboop';
 const expiration = '24h';
 
 module.exports = {
-    authError: new GraphQLError('Authentication failed. Try again later'. {
+    authError: new GraphQLError('Authentication failed. Try again later', {
         extensions: {
             code: 'nope',
         },
