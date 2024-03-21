@@ -1,17 +1,15 @@
 /*   Not meant to be used on a route; this schema is designed to be used
 inside of a birb object. */
 
-const {Schema, Model} = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const appearanceSchema = new Schema({
-    
-    birbAppearance: {
-        type: String,
-        required: true,
-    },
+  birbAppearance: {
+    type: String,
+    required: true,
+  },
 });
 
-
-const Appearance = Model("Appearance", appearanceSchema);
+const Appearance = model("Appearance", appearanceSchema);
 
 module.exports = Appearance;
