@@ -1,3 +1,4 @@
+
 const { User } = require('../models');
 const { jwtToken, authError } = require('../utils/auth');
 
@@ -50,6 +51,7 @@ const resolvers = {
     },
     removeUser: async (parent, { profileId }) => {
       return User.findOneAndDelete({ _id: profileId });
+
     },
   },
 };
