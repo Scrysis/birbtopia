@@ -13,7 +13,7 @@ const birbSchema = new Schema ({
     food: {
         type: Number,
         required: true,
-    },
+    },                              
     happiness: {
         type: Number,
         required: true,

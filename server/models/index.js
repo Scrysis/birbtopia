@@ -1,4 +1,4 @@
-const User = require("./User")
-const Birb = require("./Birb")
+const User = require("./User");
+const Birb = require("./Birb");
 
-module.exports = {User, Birb};
+module.exports = {User,Birb};

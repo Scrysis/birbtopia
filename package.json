@@ -4,6 +4,8 @@
     "express": "^4.18.3",
     "mongoose": "^8.2.1",
     "react-svg": "^16.1.33",
+    "@apollo/server": "^4.7.1",
+    "graphql": "^16.6.0",
     "vite": "^5.1.6"
   }
 }
