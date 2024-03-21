@@ -27,7 +27,11 @@ const resolvers = {
 
             const correctPassword = await user.isCorrectPassword(password);
 
-            if (!correctPassword)
+            if (!correctPassword) {
+                throw authError
+            }
+
+            const jwt = jwtToken(email)
         }
     }
 }
