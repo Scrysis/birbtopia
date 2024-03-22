@@ -15,8 +15,8 @@ const typeDefs = `
   }
 
   type Query {
-    User: ID!
-    Birb: ID!
+    user: User
+    birb: Birb
    
   }
 
