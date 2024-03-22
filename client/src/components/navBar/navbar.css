@@ -1,0 +1,32 @@
+.solid {
+  /* border-style: solid; */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1px red solid; */
+  /* background-color: #494949; */
+  /* opacity: 0; */
+}
+
+.navBtn {
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background: none;
+}
+
+/* .navBarContainer {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.logo {
+  margin: 10px;
+  padding: 20px;
+}

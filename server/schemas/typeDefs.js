@@ -4,6 +4,14 @@ const typeDefs = `
     name: String!
   }
 
+  type User {
+    username: String!
+    email: String
+    birbArray: [Birb]
+  }
+type Birb {
+  thing: Boolean
+}
   type Matchup {
     _id: ID!
     tech1: String!
@@ -15,6 +23,7 @@ const typeDefs = `
   type Query {
     tech: [Tech]
     matchups(_id: String): [Matchup]
+    profiles: User
   }
 
   type Mutation {
