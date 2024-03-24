@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "../navBar/navbar.css";
+import contactIcon from "../../assets/contactIcon.png";
+import birbIcon from "../../assets/birbIcon.png";
+import donateIcon from "../../assets/donateIcon.png";
+import logoutIcon from "../../assets/logoutIcon.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -17,9 +21,9 @@ const Navbar = () => {
                 color: isActive ? "cyan" : "white",
               })}
             >
-              {/* <img src="" alt="" className="desktopMenuBtn" /> */}
-              About Me
+              My Birbs
             </NavLink>
+            <img src={birbIcon} alt="" className="birbIcon" />
           </button>
           <button className="navBtn">
             <NavLink
@@ -28,9 +32,9 @@ const Navbar = () => {
                 color: isActive ? "cyan" : "white",
               })}
             >
-              {/* <img src="" alt="" className="desktopMenuImg" /> */}
-              Portfolio
+              My Profile
             </NavLink>
+            <img src={contactIcon} alt="" className="contactIcon" />
           </button>
           <button className="navBtn">
             <NavLink
@@ -39,9 +43,9 @@ const Navbar = () => {
                 color: isActive ? "cyan" : "white",
               })}
             >
-              {/* <img src="" alt="" className="desktopMenuImg" /> */}
-              Contact Me
+              Donate
             </NavLink>
+            <img src={donateIcon} alt="" className="donateIcon" />
           </button>
           <button
             className="navBtn"
@@ -56,9 +60,9 @@ const Navbar = () => {
                 color: isActive ? "cyan" : "white",
               })}
             >
-              {/* <img src="" alt="" className="desktopMenuImg" /> */}
-              My Resume
+              Log Out
             </NavLink>
+            <img src={logoutIcon} alt="" className="logoutIcon" />
           </button>
         </div>
       </nav>
