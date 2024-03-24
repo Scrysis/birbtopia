@@ -51,11 +51,11 @@ const Login = (props) => {
           <div>
             <h1>Login Page</h1>
             <div>
-              <img id="userPhoto" src={email} alt="email" className="email" />
+              <img src={email} alt="email" className="email" />
               <input type="text" placeholder="Type username here" className="name" />
             </div>
             <div className="second-input">
-              <img id="passPhoto" src={pass} alt="pass" className="email" />
+              <img src={pass} alt="pass" className="email" />
               <input type="password" placeholder="Type password here" className="name" />
             </div>
             <div className="login-button">
