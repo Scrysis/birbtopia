@@ -6,6 +6,7 @@ import { useState } from "react";
 import profile from "../assets/birbtopiaLogo.png";
 import email from "../assets/email.jpg";
 import pass from "../assets/pass.png";
+import './Login.css';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -50,19 +51,19 @@ const Login = (props) => {
           <div>
             <h1>Login Page</h1>
             <div>
-              <img src={email} alt="email" className="email" />
-              <input type="text" placeholder="user name" className="name" />
+              <img id="userPhoto" src={email} alt="email" className="email" />
+              <input type="text" placeholder="Type username here" className="name" />
             </div>
             <div className="second-input">
-              <img src={pass} alt="pass" className="email" />
-              <input type="password" placeholder="user name" className="name" />
+              <img id="passPhoto" src={pass} alt="pass" className="email" />
+              <input type="password" placeholder="Type password here" className="name" />
             </div>
             <div className="login-button">
               <button>Login</button>
             </div>
 
             <p className="link">
-              <a href="#">Forgot password ?</a> Or<a href="#">Sign Up</a>
+              <a href="#">Forgot password?</a> Or<a href="#">Sign Up</a>
             </p>
           </div>
         </div>
