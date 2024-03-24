@@ -1,8 +1,11 @@
 import { useState } from "react";
 // import { useMutation } from "@apollo/client";
 // import { userLogin } from "../";
-
 // import Auth from "../utils/auth";
+// import Sky from "../assets/cloud-sky-cartoon-background-blue-sky-with-white-clouds-flat-poster-or-flyer-cloudscape-panorama-pattern-seamless-colored-abstract-fluffy-texture-vector.jpg";
+import profile from "../assets/birbtopiaLogo.png";
+import email from "../assets/email.jpg";
+import pass from "../assets/pass.png";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -36,8 +39,34 @@ const Login = (props) => {
     });
   };
   return (
-    <div>
-      <h1>login page</h1>
+    <div className="main">
+      <div className="sub-main">
+        <div>
+          <div className="images">
+            <div className="container-image">
+              <img src={profile} alt="profile" className="profile" />
+            </div>
+          </div>
+          <div>
+            <h1>Login Page</h1>
+            <div>
+              <img src={email} alt="email" className="email" />
+              <input type="text" placeholder="user name" className="name" />
+            </div>
+            <div className="second-input">
+              <img src={pass} alt="pass" className="email" />
+              <input type="password" placeholder="user name" className="name" />
+            </div>
+            <div className="login-button">
+              <button>Login</button>
+            </div>
+
+            <p className="link">
+              <a href="#">Forgot password ?</a> Or<a href="#">Sign Up</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

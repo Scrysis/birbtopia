@@ -1,0 +1,55 @@
+.logo {
+  margin: 0 0 0 100;
+  height: 300px;
+  justify-content: left;
+}
+
+.homePageHeader {
+  color: rgb(255, 255, 255);
+  font-size: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
+
+.subHomePageHeader {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 60%;
+}
+
+.newContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.homePage {
+  background-image: url("../assets/homeBackroundImage.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  height: 70vh;
+}
+
+.lineBreak {
+  width: 100%;
+  height: 100px;
+  background: rgb(0, 0, 0);
+}
+
+.SkyBackground {
+  /* border: 1px red solid; */
+  width: 100%;
+  /* height: 60vh; */
+}
+
+.Footer {
+  width: 100%;
+  height: 300px;
+  background: rgb(0, 0, 0);
+}
