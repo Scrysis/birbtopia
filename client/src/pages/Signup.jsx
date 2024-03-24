@@ -6,7 +6,7 @@ import './Signup.css';
 
 // const Login = (props) => {
 //   const [formState, setFormState] = useState({ email: "", password: "" });
-  
+
 
 //   const changeState = (e) => {
 //     const { name, value } = e.target;
@@ -35,36 +35,30 @@ import './Signup.css';
 //       password: "",
 //     });
 //   };
-  return (
-    <div className="main">
-      <div className="sub-main">
-        <div>
-          <div className="images">
-            <div className="container-image">
-              <img src={profile} alt="profile" className="profile" />
-            </div>
-          </div>
-          <div>
-            <h1>Signup for Birbtopia!</h1>
-            <section>
-                <label>Username:</label>
-                <input placeholder="Enter a username"></input>
-            </section>
-            <section>
-                <label>Email:</label>
-                <input placeholder="Enter email"></input>
-            </section>
-            <section>
-                <label>Password:</label>
-                <input placeholder="Enter a password"></input>
-            </section>
-            <section>
-                <button>Signup</button>
-            </section>
-        </div>
-      </div>
-    </div>
-  );
+return (
+    <section className="section" id="signUpSection">
+        <form className="form" id="signupForm">
+            <h1 className="">Signup for Birbtopia!</h1>
+            <ul>
+                <li>
+                    <label className="label" id="usernameLabel">Username:</label>
+                    <input placeholder="Enter a username"></input>
+                </li>
+                <li>
+                    <label className="label" id="emailLabel">Email:</label>
+                    <input placeholder="Enter a email"></input>
+                </li>
+                <li>
+                    <label className="label" id="passLabel">Password:</label>
+                    <input placeholder="Enter a password"></input>
+                </li>
+                <li>
+                    <button className="button" id="signupBtn">Signup</button>
+                </li>
+            </ul>
+        </form>
+    </section>
+);
 };
 
 export default Signup;
