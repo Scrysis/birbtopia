@@ -36,28 +36,28 @@ import './Signup.css';
 //     });
 //   };
 return (
-    <section className="section" id="signUpSection">
-        <form className="form" id="signupForm">
-            <h1 className="">Signup for Birbtopia!</h1>
-            <ul>
-                <li>
-                    <label className="label" id="usernameLabel">Username:</label>
-                    <input placeholder="Enter a username"></input>
-                </li>
-                <li>
-                    <label className="label" id="emailLabel">Email:</label>
-                    <input placeholder="Enter a email"></input>
-                </li>
-                <li>
-                    <label className="label" id="passLabel">Password:</label>
-                    <input placeholder="Enter a password"></input>
-                </li>
-                <li>
-                    <button className="button" id="signupBtn">Signup</button>
-                </li>
-            </ul>
-        </form>
-    </section>
+  <section className="section" id="signUpSection">
+    <form className="form" id="signupForm">
+      <h1 className="">Signup for Birbtopia!</h1>
+      <ul>
+        <li>
+          <label className="label" id="usernameLabel">Username:</label>
+          <input placeholder="Enter a username"></input>
+        </li>
+        <li>
+          <label className="label" id="emailLabel">Email:</label>
+          <input placeholder="Enter a email"></input>
+        </li>
+        <li>
+          <label className="label" id="passLabel">Password:</label>
+          <input placeholder="Enter a password"></input>
+        </li>
+        <li>
+          <button className="button" id="signupBtn">Signup</button>
+        </li>
+      </ul>
+    </form>
+  </section>
 );
 };
 

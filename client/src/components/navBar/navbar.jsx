@@ -27,7 +27,7 @@ const Navbar = () => {
           </button>
           <button className="navBtn">
             <NavLink
-              to="/projects"
+              to="/profile"
               style={({ isActive }) => ({
                 color: isActive ? "cyan" : "white",
               })}
@@ -36,7 +36,7 @@ const Navbar = () => {
             </NavLink>
             <img src={contactIcon} alt="" className="contactIcon" />
           </button>
-          <button className="navBtn">
+          {/* <button className="navBtn">
             <NavLink
               to="/contact"
               style={({ isActive }) => ({
@@ -46,7 +46,7 @@ const Navbar = () => {
               Donate
             </NavLink>
             <img src={donateIcon} alt="" className="donateIcon" />
-          </button>
+          </button> */}
           <button
             className="navBtn"
             onClick={() => {
@@ -54,7 +54,7 @@ const Navbar = () => {
             }}
           >
             <NavLink
-              to="/public/Garrett_Gonzales_Resume_2023.pdf"
+              to="/logout"
               target="_blank"
               style={({ isActive }) => ({
                 color: isActive ? "cyan" : "white",
