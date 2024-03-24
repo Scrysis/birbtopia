@@ -23,7 +23,6 @@
   color: rgb(255, 255, 255);
   font-size: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: 60%;
   margin-bottom: 100px;
 }
 
@@ -31,13 +30,9 @@
   background-image: url("../assets/cloud-sky-cartoon-background-blue-sky-with-white-clouds-flat-poster-or-flyer-cloudscape-panorama-pattern-seamless-colored-abstract-fluffy-texture-vector.jpg");
 
   background-size: cover;
-
   background-position: center;
-
   background-repeat: no-repeat;
-
   background-attachment: fixed;
-
   height: 100%;
 }
 

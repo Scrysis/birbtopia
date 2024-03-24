@@ -8,10 +8,10 @@ const Home = () => {
       <div className="homePage">
         <img src={Logo} alt="Logo" className="logo" />
         <div className="homePageHeader">
-          HI User
+         Hello, User!
           <div className="newContainer">
             <div className="subHomePageHeader">
-              Welcome to Birbs, feel free to look around, get Birbs and feed
+              Welcome to *:･ﾟ✧ Birbtopia ✧･ﾟ:*! feel free to look around, get Birbs and feed
               them! If you like the game feel free to support our developers!
             </div>
             <div className="usersBirbs">Its all of Users Birbs!</div>
