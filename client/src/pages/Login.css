@@ -81,3 +81,12 @@ button {
 a {
   color: blue;
 }
+
+input{
+  height: 30px;
+}
+
+#userPhoto{
+  width: 20px;
+  height: 20px;
+}
