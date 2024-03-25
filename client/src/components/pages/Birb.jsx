@@ -1,7 +1,7 @@
-import { useQuery, useMutation } from '@apollo/client';
-import { useParams, Link } from 'react-router-dom';
+// import { useQuery, useMutation } from '@apollo/client';
+// import { useParams, Link } from 'react-router-dom';
 
-const birbCard = () => {
+const BirbCard = () => {
 
     return (
         <div className="mainBirbCard">
@@ -12,3 +12,5 @@ const birbCard = () => {
         </div>
     )
 }
+
+export default BirbCard;

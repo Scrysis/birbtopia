@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import "../navBar/navbar.css";
+import "./navbar.css";
 import contactIcon from "../../assets/contactIcon.png";
 import birbIcon from "../../assets/birbIcon.png";
 // import donateIcon from "../../assets/donateIcon.png";
 import logoutIcon from "../../assets/logoutIcon.png";
+import "./navbar.css";
 
 const Navbar = () => {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   if (location.pathname === "/login") return <></>;
   return (
     <>
