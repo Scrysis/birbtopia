@@ -1,6 +1,6 @@
 import "./Profile.css";
-import Logo from "../assets/birbtopiaLogo.png";
-import favBirb from "../assets/a.png";
+import Logo from "../../assets/birbtopiaLogo.png";
+import favBirb from "../../assets/a.png";
 
 export default function Profile() {
     return (
