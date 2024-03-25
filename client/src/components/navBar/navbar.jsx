@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import "../navBar/navbar.css";
 import contactIcon from "../../assets/contactIcon.png";
 import birbIcon from "../../assets/birbIcon.png";
-import donateIcon from "../../assets/donateIcon.png";
+// import donateIcon from "../../assets/donateIcon.png";
 import logoutIcon from "../../assets/logoutIcon.png";
 
 const Navbar = () => {
@@ -47,15 +47,10 @@ const Navbar = () => {
             </NavLink>
             <img src={donateIcon} alt="" className="donateIcon" />
           </button> */}
-          <button
-            className="navBtn"
-            onClick={() => {
-              console.log("monke");
-            }}
-          >
+
+          <button className="navBtn">
             <NavLink
               to="/logout"
-              target="_blank"
               style={({ isActive }) => ({
                 color: isActive ? "cyan" : "white",
               })}

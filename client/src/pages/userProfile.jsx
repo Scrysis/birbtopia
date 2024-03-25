@@ -1,7 +1,7 @@
 import "./index.css";
 import Logo from "../assets/birbtopiaLogo.png";
 
-export default function profilePage() {
+export default function userProfile() {
     return (
         <div className="homePage">
             <img src={Logo} alt="Logo" className="logo" />

@@ -41,6 +41,10 @@
   align-items: center;
 }
 
+a:link, a:visited {
+  text-decoration: none;
+}
+
 /* .navBarContainer {
   display: flex;
   justify-content: space-between;
