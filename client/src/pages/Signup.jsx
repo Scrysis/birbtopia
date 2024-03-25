@@ -38,7 +38,7 @@ import './Signup.css';
 return (
     <section className="section" id="signUpSection">
         <form className="form" id="signupForm">
-            <h1 className="">Signup for Birbtopia!</h1>
+            <h1 className="title">Signup for Birbtopia!</h1>
             <ul>
                 <li>
                     <label className="label" id="usernameLabel">Username:</label>

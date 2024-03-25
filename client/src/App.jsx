@@ -1,15 +1,38 @@
 import "./App.css";
 import Navbar from "./components/navBar/navbar";
+import Signup from "./components/pages/Signup";
+
 import { Outlet } from "react-router-dom";
 
-function App() {
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('Homepage');
+
+  const showPage = () => {
+      if (currentPage === "Homepage") {
+          return <Homepage />;
+      }
+      if (currentPage === "About") {
+          return <About />;
+      }
+      if (currentPage === "Projects") {
+          return <Projects />;
+      }
+      if (currentPage === "Contact") {
+          return <Contact />;
+      }
+      if (currentPage === "Resume") {
+          return <Resume />;
+      }
+  };
+
+  const pageChange = (page) => setCurrentPage(page);
+
   return (
-    <>
-      <Navbar />
-      <div>
-        <Outlet />
-      </div>
-    </>
+      <section>
+          <Header />
+          <NavTabs currentPage={currentPage} pageChange={pageChange} />
+          <main className='main'>{showPage()}</main>
+      </section>
   );
 }
 
