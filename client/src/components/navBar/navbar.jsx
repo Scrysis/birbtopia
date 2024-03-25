@@ -18,7 +18,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               style={({ isActive }) => ({
-                color: isActive ? "cyan" : "white",
+                color: isActive ? "cyan" : "lightBlue",
               })}
             >
               My Birbs
@@ -29,7 +29,7 @@ const Navbar = () => {
             <NavLink
               to="/profile"
               style={({ isActive }) => ({
-                color: isActive ? "cyan" : "white",
+                color: isActive ? "cyan" : "lightBlue",
               })}
             >
               My Profile
@@ -52,7 +52,7 @@ const Navbar = () => {
             <NavLink
               to="/logout"
               style={({ isActive }) => ({
-                color: isActive ? "cyan" : "white",
+                color: isActive ? "cyan" : "lightBlue",
               })}
             >
               Log Out
