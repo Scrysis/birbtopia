@@ -3,6 +3,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home.jsx";
 import Login from "./pages/Login.jsx";
+import Profile from "./pages/Profile.jsx"
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,8 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "profile"
-        // element: <Profile />,
+        path: "profile",
+        element: <Profile />
       }
     ],
   },
