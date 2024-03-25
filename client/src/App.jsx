@@ -1,6 +1,8 @@
 import "./App.css";
-import Navbar from "./components/navBar/navbar";
+import Navbar from "./components/pages/Navbar";
 import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
+import Birb from './components/pages/Birb';
 
 import { Outlet } from "react-router-dom";
 
@@ -8,17 +10,17 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('Homepage');
 
   const showPage = () => {
-      if (currentPage === "Homepage") {
-          return <Homepage />;
+      if (currentPage === "Home") {
+          return <Home />;
       }
-      if (currentPage === "About") {
-          return <About />;
+      if (currentPage === "Birb") {
+          return <Birb />;
       }
-      if (currentPage === "Projects") {
-          return <Projects />;
+      if (currentPage === "Signup") {
+          return <Signup />;
       }
-      if (currentPage === "Contact") {
-          return <Contact />;
+      if (currentPage === "Login") {
+          return <Login />;
       }
       if (currentPage === "Resume") {
           return <Resume />;
@@ -29,11 +31,9 @@ export default function App() {
 
   return (
       <section>
-          <Header />
-          <NavTabs currentPage={currentPage} pageChange={pageChange} />
+          <Navbar currentPage={currentPage} pageChange={pageChange} />
           <main className='main'>{showPage()}</main>
       </section>
   );
 }
 
-export default App;
