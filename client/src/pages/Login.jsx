@@ -63,7 +63,7 @@ const Login = (props) => {
             </div>
 
             <p className="link">
-              <a href="#">Forgot password?</a> Or<a href="#">Sign Up</a>
+              <a href="#Forgotpassword">Forgot password?</a> Or<a href="#Signup">Sign Up</a>
             </p>
           </div>
         </div>
