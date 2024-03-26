@@ -10,7 +10,8 @@ import "./navbar.css";
 const Navbar = () => {
   const location = useLocation();
   // console.log(location);
-  if (location.pathname === "/login") return <></>;
+  if (location.pathname === "/login" || location.pathname === "/signup")
+    return <></>;
   return (
     <>
       <nav className="navBarContainer solid">

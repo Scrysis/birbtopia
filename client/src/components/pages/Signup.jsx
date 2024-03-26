@@ -5,11 +5,18 @@ import pass from "../../assets/pass.png";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import profile from "../../assets/birbtopiaLogo.png";
+import { useMutation } from "@apollo/client";
+import { SIGNUP } from "../../utils/mutations";
 
 const Signup = (props) => {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({
+    email: "",
+    password: "",
+    username: "",
+  });
+  const [signUp] = useMutation(SIGNUP);
 
-  const changeState = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
     setFormState({
@@ -18,15 +25,15 @@ const Signup = (props) => {
     });
   };
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     console.log(formState);
     try {
-      const { data } = await Login({
+      const { data } = await signUp({
         variables: { ...formState },
       });
-
-      Auth.login(data.login.token);
+      console.log(data);
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
@@ -34,6 +41,7 @@ const Signup = (props) => {
     setFormState({
       email: "",
       password: "",
+      username: "",
     });
   };
   //   };
@@ -57,32 +65,55 @@ const Signup = (props) => {
                 <label className="label" id="usernameLabel">
                   Username:
                 </label>
-                <input placeholder="Enter a username"></input>
+                <input
+                  placeholder="Enter a username"
+                  name="username"
+                  value={formState.username}
+                  onChange={handleChange}
+                ></input>
               </div>
               <div className="second-input">
+                <label className="label" id="emailLabel">
+                  Email:
+                </label>
+                <input
+                  placeholder="Enter an email"
+                  name="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                ></input>
+                <img src={pass} alt="pass" className="email" />
+              </div>
+              <div className="third-input?">
+                {/* //!FIX THIS */}
+                <label className="label" id="emailLabel">
+                  Password:
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                ></input>
                 <img src={pass} alt="pass" className="email" />
               </div>
               <div className="login-button">
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleSignup}>SignUp</button>
               </div>
-
               <p className="link">
                 {/* <a href="#Forgotpassword">Forgot password?</a> Or */}
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/login">Already have an account?</Link>
               </p>
             </div>
           </div>
         </div>
       </div>
-
+      {/* 
       <section className="section" id="signUpSection">
         <form className="form" id="signupForm">
           <ul>
             <li></li>
             <li>
-              <label className="label" id="emailLabel">
-                Email:
-              </label>
               <input placeholder="Enter a email"></input>
             </li>
             <li>
@@ -98,7 +129,7 @@ const Signup = (props) => {
             </li>
           </ul>
         </form>
-      </section>
+      </section> */}
     </>
   );
 };
