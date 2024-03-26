@@ -1,13 +1,14 @@
 * {
-  font-size: 1.25rem;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-family: "alumni-sans-pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   /* FOR TESTING */
   /* outline: 2px solid red;
   border: 2px solid green;  */
 }
 
 .bg-image {
-
   background-image: url("../../assets/clouds.jpg");
   background-size: cover;
   background-position: center;
@@ -17,37 +18,22 @@
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* 
-h1 {
-  font-size: 2rem;
-} */
+
 
 .profileSection {
   display: flex;
   justify-content: space-evenly;
-  outline: 3px solid black;
+  outline: 3px solid #399df4;
   border-radius: 20px;
-  margin: 0 7rem;
-  padding-bottom: 2rem;
+  margin: -1.5rem 7rem;
+  padding-bottom: 1rem;
 }
 
-.userProfile{
-  width: 50%;
+.userProfile {
+  width: 100%;
   padding-left: 2rem;
   padding-right: 3rem;
   text-align: left;
-}
-
-.favoriteBirbPhoto {
-  display: flex;
-  flex-direction: column;
-  width: 40%; 
-}
-
-.favBirbImg {
-  border-radius: 15px;
-  margin: 0 2rem;
-  object-fit: contain;
 }
 
 button {
