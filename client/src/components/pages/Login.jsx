@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 // import { userLogin } from "../";
 import Auth from "../../utils/auth";
 import profile from "../../assets/birbtopiaLogo.png";
@@ -7,10 +7,11 @@ import email from "../../assets/email.jpg";
 import pass from "../../assets/pass.png";
 import "./login.css";
 import { Link } from "react-router-dom";
+import { LOGIN } from "../../utils/mutations";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
-  //   const [login, { error, data }] = useMutation(userLogin);
+  const [login, { error, data }] = useMutation(LOGIN);
 
   const handelChange = (e) => {
     const { name, value } = e.target;
