@@ -30,10 +30,22 @@
 }
 
 .userProfile {
-  width: 100%;
+  width: 50%;
   padding-left: 2rem;
   padding-right: 3rem;
   text-align: left;
+}
+
+.favoriteBirbPhoto {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.favBirbImg {
+  border-radius: 15px;
+  margin: 0 2rem;
+  object-fit: contain;
 }
 
 button {

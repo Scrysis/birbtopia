@@ -1,5 +1,7 @@
 import "./Profile.css";
 import Logo from "../../assets/birbtopiaLogo.png";
+import { useState } from "react";
+// import favBirb from "../../assets/chungus.jpeg";
 
 export default function Profile() {
     return (
@@ -14,12 +16,16 @@ export default function Profile() {
                 <button>Delete Account</button>  */}
 
                     </div>
-                
+                    
+                    <div className="favoriteBirbPhoto">
+                        <h1>Favorite Birb</h1>
+                        <img src={favBirb} alt="favorite birb" className="favBirbImg" />
+                    </div>
 
                 </div>
                 <br></br><br></br>
                 <br></br><br></br>
-                <br></br><br></br>
+
             </div>
         </div>
     );
