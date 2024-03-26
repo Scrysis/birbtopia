@@ -17,7 +17,7 @@ const typeDefs = `
   type Query {
     user: User
     birb: Birb
-   
+    me: User
   }
 
   type Mutation {

@@ -1,6 +1,6 @@
 import "./Profile.css";
 import Logo from "../../assets/birbtopiaLogo.png";
-import { useState } from "react";
+// import { useState } from "react";
 // import favBirb from "../../assets/chungus.jpeg";
 
 export default function Profile() {
@@ -17,10 +17,10 @@ export default function Profile() {
 
                     </div>
                     
-                    <div className="favoriteBirbPhoto">
+                    {/* <div className="favoriteBirbPhoto">
                         <h1>Favorite Birb</h1>
                         <img src={favBirb} alt="favorite birb" className="favBirbImg" />
-                    </div>
+                    </div> */}
 
                 </div>
                 <br></br><br></br>

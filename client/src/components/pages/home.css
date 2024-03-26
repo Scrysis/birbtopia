@@ -3,30 +3,33 @@
   transition: filter 300ms;
   height: 200px;
 }
+  
+  .newContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .homePageHeader {
+    color: black;
+    padding: 0 10px;
+    margin: 0 10px;
+  }
 
-.newContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
+  .subHomePageHeader {
+    color: black;
+    margin: 0 3rem;
+  }
+  
+  .homePage {
+    background-image: url("../../assets/clouds.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+  }
+  
 
-.homePageHeader {
-  color: black;
-  padding: 0 10px;
-  margin: 0 10px;
-}
 
-.subHomePageHeader {
-  color: black;
-  margin: 0 3rem;
-}
-
-.homePage {
-  background-image: url("../../assets/clouds.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
-}

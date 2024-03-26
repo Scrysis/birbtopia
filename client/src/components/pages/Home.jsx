@@ -7,17 +7,19 @@ const Home = () => {
       <div className="homePage">
         <img src={Logo} alt="Logo" className="logo" />
         <div className="homePageHeader">
-         <h1> Hello, User!</h1>
+          <h1> Hello, User!</h1>
           <div className="newContainer">
             <div className="subHomePageHeader">
+
               <h2>Welcome to *:･ﾟ✧ Birbtopia ✧･ﾟ:*! Feel free to look around, collect as many Birbs as your heart desires, and feed
-              them!</h2>
+                them!</h2>
             </div>
+            <div className="birbLine"></div>
             <div className="usersBirbs">
-              <h3>Here are all your Birbs!</h3>
-              </div>
+              <h3>Here are all your Birbs!</h3></div>
+            <div className="square"></div>
             <div>
-              <h6>adding text here bc the background image does not extend if there is not enough content. pls replace this div with birbs</h6>
+              <h6 className="birbsStates">Click anyone to view their stats!</h6>
             </div>
           </div>
         </div>

@@ -18,21 +18,21 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login />,
       },
       {
-        path: "profile",
-        element: <Profile />
+        path: "/profile",
+        element: <Profile />,
       },
       {
-        path: "birb",
-        element: <Birb />
+        path: "/birb",
+        element: <Birb />,
       },
       {
-        path: "signup",
-        element: <Signup />
-      }
+        path: "/signup",
+        element: <Signup />,
+      },
     ],
   },
 ]);
