@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
-import { QUERY_SINGLE_BIRB } from '../utils/queries';
+import { QUERY_SINGLE_BIRB } from '../../utils/queries';
 
 const SingleBirb = () => {
   const { birbId } = useParams();
