@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 // import { userLogin } from "../";
 import Auth from "../../utils/auth";
-// import Sky from "../assets/cloud-sky-cartoon-background-blue-sky-with-white-clouds-flat-poster-or-flyer-cloudscape-panorama-pattern-seamless-colored-abstract-fluffy-texture-vector.jpg";
 import profile from "../../assets/birbtopiaLogo.png";
 import email from "../../assets/email.jpg";
 import pass from "../../assets/pass.png";

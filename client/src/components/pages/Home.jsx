@@ -1,5 +1,4 @@
 import Logo from "../../assets/birbtopiaLogo.png";
-// import Sky from "../assets/cloud-sky-cartoon-background-blue-sky-with-white-clouds-flat-poster-or-flyer-cloudscape-panorama-pattern-seamless-colored-abstract-fluffy-texture-vector.jpg";
 import "./home.css";
 
 const Home = () => {
@@ -8,14 +7,16 @@ const Home = () => {
       <div className="homePage">
         <img src={Logo} alt="Logo" className="logo" />
         <div className="homePageHeader">
-          Hello, User!
+          <h1> Hello, User!</h1>
           <div className="newContainer">
             <div className="subHomePageHeader">
-              Welcome to *:･ﾟ✧ Birbtopia ✧･ﾟ:*! Feel free to look around,
-              collect as many Birbs as your heart desires, and feed them!
+
+              <h2>Welcome to *:･ﾟ✧ Birbtopia ✧･ﾟ:*! Feel free to look around, collect as many Birbs as your heart desires, and feed
+                them!</h2>
             </div>
             <div className="birbLine"></div>
-            <div className="usersBirbs">Here are all your Birbs!</div>
+            <div className="usersBirbs">
+              <h3>Here are all your Birbs!</h3></div>
             <div className="square"></div>
             <div>
               <h6 className="birbsStates">Click anyone to view their stats!</h6>
