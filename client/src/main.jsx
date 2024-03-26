@@ -1,8 +1,11 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home.jsx";
-import Login from "./pages/Login.jsx";
+import Home from "./components/pages/Home.jsx";
+import Login from "./components/pages/Login.jsx";
+import Profile from "./components/pages/Profile.jsx";
+import Birb from "./components/pages/Birb.jsx";
+import Signup from "./components/pages/Signup.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,18 @@ const router = createBrowserRouter([
         path: "login",
         element: <Login />,
       },
+      {
+        path: "profile",
+        element: <Profile />
+      },
+      {
+        path: "birb",
+        element: <Birb />
+      },
+      {
+        path: "signup",
+        element: <Signup />
+      }
     ],
   },
 ]);
