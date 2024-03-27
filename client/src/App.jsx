@@ -5,7 +5,7 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/navBar/Navbar";
 import { setContext } from "@apollo/client/link/context";
 import { Outlet } from "react-router-dom";
 
