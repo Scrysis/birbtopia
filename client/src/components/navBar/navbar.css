@@ -1,12 +1,13 @@
 .solid {
   /* border-style: solid; */
-  background-color: #97d5ed;
+  background-color: #93d8f4;
 }
 
 .navBtnContainer {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
+  padding-top: 0;
   /* border: 1px red solid; */
   /* background-color: #494949; */
   /* opacity: 0; */
