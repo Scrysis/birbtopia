@@ -11,33 +11,31 @@ const birbSchema = new Schema({
   },
   food: {
     type: Number,
-    required: true,
+    default: 100,
   },
   happiness: {
     type: Number,
-    required: true,
+    default: 100,
   },
   lastTimeFed: {
     type: Date,
-    required: true,
     default: Date.now,
   },
   lastTimePetted: {
     type: Date,
-    required: true,
     default: Date.now,
   },
   health: {
     type: Number,
-    required: true,
+    default: 100,
   },
   magic: {
     type: Number,
-    required: true,
+    default: 100,
   },
   stamina: {
     type: Number,
-    required: true,
+    default: 100,
   },
 });
 
