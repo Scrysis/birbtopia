@@ -48,6 +48,14 @@ const resolvers = {
       const token = jwtToken(user);
       return { username: user.username, token };
     },
+    addBirb: async (_, {userId}) => {
+      const birb = await Birb.create({birbId});
+      const user = await User.findOneAndUpdate(
+        { username },
+        { $push: { birbArray: birbId } },
+        { new: true }
+      );
+    },
   },
 };
 
