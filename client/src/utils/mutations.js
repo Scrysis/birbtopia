@@ -1,8 +1,10 @@
 import { gql } from "@apollo/client";
 
 export const ADD_BIRB = gql`
-  mutation addBirb {
-    something
+  mutation addBirb ($birbname: String!){
+    addBirb(birbname: $birbname){
+      birbname
+    }
   }
 `;
 export const LOGIN = gql`

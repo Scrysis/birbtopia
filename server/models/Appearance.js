@@ -1,21 +1,21 @@
 /*   Not meant to be used on a route; this schema is designed to be used
 inside of a birb object. */
 
+
 const { Schema, model } = require("mongoose");
 
 const appearanceSchema = new Schema({
   
   birbBody:{
     type: String,
-    required: true,
+    default: generateBirbBody(),
   },
   birbEyes:{
     type: String,
-    required: true,
+    default: generateBirbEyes(),
   },  
   birbAppearance: {
     type: String,
-    required: true,
     default: storeAppearance(),
   },
   
@@ -35,11 +35,21 @@ const appearanceSchema = new Schema({
           </div>`
           
         );
+      },
+      generateBirbBody(){
+        var birbBodNum = Math.floor(Math.random() * 12);
+
+        return `client/src/assets/birb/body${birbBodNum}.png`;
+      },
+      generateBirbEyes(){
+        var birbEyeNum = Math.floor(Math.random() * 5);
+
+        return `client/src/assets/birb/eye${birbEyeNum}.png`;
       }
     }
   
 });
 
-const Appearance = model("Appearance", appearanceSchema);
+const Appearance = model("appearance", appearanceSchema);
 
 module.exports = Appearance;
