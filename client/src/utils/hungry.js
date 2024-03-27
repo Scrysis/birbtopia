@@ -1,3 +1,4 @@
+import Birb from "../../../server/models/Birb";
 
 
 class Hungry {
@@ -5,11 +6,22 @@ class Hungry {
 
         const timeDifference = Date.now.getTime() - Date.getTime();
 
-        return timeDifference/ (1000 * 60 * 60 * 24);
+        return timeDifference/ (1000 * 60 * 60);
 
     }
 
-    subtractFood
+    subtractFood(birbID){
+
+        const birb = await Birb.findById(birbID);
+        birb.food = birb.food - 15;
+               
+    }
+
+    checkUserBirbs(){
+        
+    }
+
+
 }
 
 export default new Hungry();
