@@ -52,7 +52,7 @@ const resolvers = {
       const birb = await Birb.create({ birbId });
       const user = await User.findOneAndUpdate(
         { username },
-        { $push: { birbArray: birb } },
+        { $push: { birbArray: birbId } },
         { new: true }
       );
     },
