@@ -16,6 +16,7 @@ const Home = () => {
             </div>
             <div className="birbLine"></div>
             <div className="usersBirbs">
+              <button className="button" id="generateBirbBtn">Adopt Birb!</button>
               <h3>Here are all your Birbs!</h3></div>
             <div className="square"></div>
             <div>
