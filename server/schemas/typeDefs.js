@@ -1,12 +1,13 @@
+// const { gql } = require("apollo-server");
 const typeDefs = `
+  type Birb {
+    thing: Boolean
+  }
+
   type User {
     username: String!
     email: String!
     birbArray: [Birb]
-  }
-
-  type Birb {
-    thing: Boolean
   }
 
   type Auth {
@@ -23,6 +24,7 @@ const typeDefs = `
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
+    addBirb(userId: ID!): ID
   }
 `;
 

@@ -27,7 +27,7 @@ const userSchema = new Schema({
     required: true,
     minLength: [8],
   },
-  birbArray: [{ type: Schema.Types.ObjectId, ref: "birb" }],
+  birbArray: [{ type: Schema.Types.ObjectId, ref: "Birb" }],
 });
 
 userSchema.pre("save", async function (next) {
@@ -40,7 +40,7 @@ userSchema.pre("save", async function (next) {
 });
 
 userSchema.methods.saveBirb = async function (birbId) {
- this.birbArray.push(birbId);
+  this.birbArray.push(birbId);
 };
 
 // compare the incoming password with the hashed password
