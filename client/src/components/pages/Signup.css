@@ -1,0 +1,20 @@
+a:link {
+    text-decoration: underline;
+}
+
+input {
+    padding: 0 1rem;
+}
+
+.second-input {
+    padding: 0;
+}
+
+.signup-form {
+    display: inline-block;
+}
+
+.label {
+    text-align: left;
+    padding: 1rem;
+}

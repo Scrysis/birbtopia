@@ -95,6 +95,10 @@ button {
     font-weight: 400;
 }
 
+a:link {
+    text-decoration: underline;
+}
+
 a {
     color: blue;
 }

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import profile from "../../assets/birbtopiaLogo.png";
 import { useMutation } from "@apollo/client";
 import { SIGNUP } from "../../utils/mutations";
+import "../../components/pages/Signup.css";
 
 const Signup = (props) => {
   const [formState, setFormState] = useState({
@@ -52,7 +53,8 @@ const Signup = (props) => {
           <div>
             <div>
               <img src={profile} alt="profile" className="loginLogo" />
-              <h1 className="title">Signup for Birbtopia!</h1>
+              <h1 className="title">Signup</h1>
+              <div className="signup-form">
               <div>
                 {/* <input
                   type="text"
@@ -77,28 +79,31 @@ const Signup = (props) => {
                   Email:
                 </label>
                 <input
-                  placeholder="Enter an email"
+                  placeholder="Enter your email"
                   name="email"
                   value={formState.email}
                   onChange={handleChange}
                 ></input>
-                <img src={pass} alt="pass" className="email" />
+            
               </div>
               <div className="third-input?">
                 {/* //!FIX THIS */}
+                
                 <label className="label" id="emailLabel">
                   Password:
                 </label>
+                
                 <input
                   type="password"
+                  placeholder="Enter a password"
                   name="password"
                   value={formState.password}
                   onChange={handleChange}
                 ></input>
-                <img src={pass} alt="pass" className="email" />
+                </div>
               </div>
               <div className="login-button">
-                <button onClick={handleSignup}>SignUp</button>
+                <button onClick={handleSignup}>Sign Up</button>
               </div>
               <p className="link">
                 {/* <a href="#Forgotpassword">Forgot password?</a> Or */}
