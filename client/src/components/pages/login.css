@@ -1,41 +1,45 @@
 .main {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-image: url("../../assets/clouds.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
-  /* background-color: #e1e3eb; */
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-image: url("../../assets/clouds.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    /* background-color: #e1e3eb; */
 }
+
 .sub-main {
-  display: flex;
-  justify-content: center;
-  height: 550px;
-  width: 35%;
-  box-shadow: 11px 12px 13px 12px rgba(0, 0, 0, 0.3);
-  padding-top: 30px;
-  border-radius: 60px;
-  background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    width: 35%;
+    box-shadow: 11px 12px 13px 12px rgba(0, 0, 0, 0.3);
+    padding-top: 30px;
+    border-radius: 60px;
+    background-color: #97d5ed;
 }
+/* 
 .images {
-  padding-top: 20px;
-  justify-content: center;
-  display: flex;
-}
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+} */
+
 .container-image {
-  background-color: rgb(223, 221, 221);
-  border-radius: 150px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 115px;
-  width: 115px;
+    background-color: rgb(221, 223, 223);
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
 }
+
 /* .profile {
     height: 100px;
     width: 100px;
@@ -43,61 +47,63 @@
   } */
 
 .loginLogo {
-  /* border: 3px red solid; */
-  width: 400px;
+    /* border: 3px red solid; */
+    width: 400px;
 }
 
 input {
-  width: 300px;
-  height: 50px;
-  border-radius: 60px;
-  box-shadow: inset 0px 0px 25px 0px #888;
-  border: none;
-  outline: none;
-  background-color: #fff;
+    width: 300px;
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px rgb(222, 241, 242);
+    border: none;
+    outline: none;
+    background-color: #fff;
 }
 
 .email {
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  padding: 14px 0 0 25px;
+    height: .75rem;
+    position: absolute;
+    padding: .6rem .7rem;
 }
 
 .name {
-  padding-left: 70px;
-  font-size: 20px;
+    padding-left: 70px;
+    font-size: 20px;
 }
+
 .second-input {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 button {
-  width: 380px;
-  height: 50px;
-  border-radius: 60px;
-  background-color: #b103fc;
-  color: white;
-  font-size: 25px;
-  border: none;
+    width: 380px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #b103fc;
+    color: white;
+    font-size: 25px;
+    border: none;
 }
+
 .login-button {
-  padding-top: 25px;
+    padding-top: 25px;
 }
 
 .link {
-  font-size: 25px;
-  font-weight: 400;
+    font-size: 25px;
+    font-weight: 400;
 }
+
 a {
-  color: blue;
+    color: blue;
 }
 
 input {
-  height: 30px;
+    height: 30px;
 }
 
 h1 {
-  margin: 0;
-  padding-bottom: 10px;
+    margin: 0;
+    padding-bottom: 10px;
 }
