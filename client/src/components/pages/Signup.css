@@ -1,0 +1,22 @@
+a:link {
+    text-decoration: underline;
+}
+
+input, .second-input label {
+    padding: 0 1rem;
+}
+
+.second-input {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    text-align: left;
+    padding: 1rem;
+}
+
+.sub-main {
+    height: 100%;
+}

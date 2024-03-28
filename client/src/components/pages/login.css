@@ -72,7 +72,7 @@ input {
     font-size: 20px;
 }
 
-.second-input {
+.secondInput {
     padding-top: 20px;
 }
 
@@ -93,6 +93,10 @@ button {
 .link {
     font-size: 25px;
     font-weight: 400;
+}
+
+a:link {
+    text-decoration: underline;
 }
 
 a {
