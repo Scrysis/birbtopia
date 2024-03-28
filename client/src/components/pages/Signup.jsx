@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import profile from "../../assets/birbtopiaLogo.png";
-import email from "../../assets/email.jpg";
+// import email from "../../assets/email.jpg";
 import pass from "../../assets/pass.png";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
