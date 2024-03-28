@@ -58,7 +58,7 @@ const Login = (props) => {
                 onChange={handelChange}
               />
             </div>
-            <div className="second-input">
+            <div className="secondInput">
               <img src={pass} alt="pass" className="email" />
               <input
                 type="password"
