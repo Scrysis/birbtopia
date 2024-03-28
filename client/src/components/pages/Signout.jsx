@@ -5,7 +5,7 @@ import { Auth } from '../../utils/auth';
 
 Logout() {
     localStorage.removeItem('jwt');
-    setAuthState({ username:'', status: false});
+    setAuthState({ username:'',   : false});
     
 }
 

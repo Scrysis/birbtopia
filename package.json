@@ -21,7 +21,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+  "render-build":"npm install && npm run build"
   },
   "author": "",
   "license": "ISC"
