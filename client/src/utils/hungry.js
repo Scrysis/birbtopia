@@ -10,14 +10,14 @@ class Hungry {
 
     }
 
-    subtractFood(birbID){
+    async subtractFood(birbID){
 
         const birb = await Birb.findById(birbID);
         birb.food = birb.food - 15;
                
     }
 
-    checkUserBirbs(){
+    async checkUserBirbs(){
         
     }
 
