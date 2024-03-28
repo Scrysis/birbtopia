@@ -27,7 +27,7 @@ const Navbar = () => {
             </NavLink>
             <img src={birbIcon} alt="" className="birbIcon" />
           </button>
-          <button className="navBtn">
+          {/* <button className="navBtn">
             <NavLink
               to="/profile"
               style={({ isActive }) => ({
@@ -37,7 +37,7 @@ const Navbar = () => {
               My Profile
             </NavLink>
             <img src={contactIcon} alt="" className="contactIcon" />
-          </button>
+          </button> */}
           {/* <button className="navBtn">
             <NavLink
               to="/contact"
