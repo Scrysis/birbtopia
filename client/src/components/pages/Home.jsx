@@ -1,8 +1,23 @@
 import Logo from "../../assets/birbtopiaLogo.png";
 import "./home.css";
+import { ADD_BIRB } from "../../utils/mutations";
+import  resolvers from "../../../../server/schemas/resolvers.js";
+
+
+
 
 const Home = () => {
+  const [name, setName] = useState("");
+
+  const addBirb = resolvers.Mutation.addBirb;
+  const onSubmitBirb = (name) => {
+
+    addBirb(name);
+
+  }
+
   return (
+    
     <div className="container">
       <div className="homePage">
         <img src={Logo} alt="Logo" className="logo" />
@@ -21,8 +36,12 @@ const Home = () => {
               type="text"
               placeholder="Name your birb!"
               name="nameBirb"
+              onChange={(e) => setName(e.target.value )}
+              value={name}
+
               />
-              <button className="adoptBtn" id="generateBirbBtn">Adopt Birb!</button>
+              <button className="adoptBtn" id="generateBirbBtn"
+              onClick={onSubmitBirb(name)}>Adopt Birb!</button>
               </div>
               <h3>Here are all your Birbs!</h3>
               <h4 className="birbsStats">Click on any birb to view their stats!</h4></div>
