@@ -51,10 +51,11 @@ const resolvers = {
     addBirb: async (_, { userId, birbname }) => {
       const birb = await Birb.create(birbname);
       const user = await User.findOneAndUpdate(
-        { username },
-        { $push: { birbArray: birbId } },
+        { _id: userId },
+        { $push: { birbArray: birb._id } },
         { new: true }
       );
+      return birb;
     },
   },
 };

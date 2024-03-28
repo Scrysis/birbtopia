@@ -1,20 +1,27 @@
 import Logo from "../../assets/birbtopiaLogo.png";
 import "./home.css";
 import { ADD_BIRB } from "../../utils/mutations";
-import  resolvers from "../../../../server/schemas/resolvers.js";
-
+import { useMutation } from "@apollo/client";
+import { useState } from "react";
+/* import  resolvers from "../../../../server/schemas/resolvers.js";
+ */
 
 
 
 const Home = () => {
   const [name, setName] = useState("");
+  const [addBirb] = useMutation(ADD_BIRB);
 
-  const addBirb = resolvers.Mutation.addBirb;
-  const onSubmitBirb = (name) => {
-
-    addBirb(name);
-
-  }
+  const onSubmitBirb = () => {
+    
+    addBirb({ variables: { userId: "6604d958e79cc6d2b58d6603", birbname: name } }) 
+      .then(response => {
+        console.log('Birb added!', response);
+      })
+      .catch(e => {
+        console.error('Error adding birb', e);
+      });
+  };
 
   return (
     
@@ -41,7 +48,7 @@ const Home = () => {
 
               />
               <button className="adoptBtn" id="generateBirbBtn"
-              onClick={onSubmitBirb(name)}>Adopt Birb!</button>
+              onClick={() => onSubmitBirb(name)}>Adopt Birb!</button>
               </div>
               <h3>Here are all your Birbs!</h3>
               <h4 className="birbsStats">Click on any birb to view their stats!</h4></div>
