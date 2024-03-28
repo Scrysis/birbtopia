@@ -1,7 +1,8 @@
 // const { gql } = require("apollo-server");
 const typeDefs = `
   type Birb {
-    thing: Boolean
+    birbname: String!
+    
   }
 
   type User {
