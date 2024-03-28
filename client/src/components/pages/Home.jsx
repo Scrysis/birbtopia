@@ -16,11 +16,18 @@ const Home = () => {
             </div>
             <div className="birbLine"></div>
             <div className="usersBirbs">
-              <button className="button" id="generateBirbBtn">Adopt Birb!</button>
-              <h3>Here are all your Birbs!</h3></div>
-            <div className="square"></div>
-            <div>
-              <h6 className="birbsStates">Click anyone to view their stats!</h6>
+              <div className="adoptBirb">
+              <input className="nameBirb"
+              type="text"
+              placeholder="Name your birb!"
+              name="nameBirb"
+              />
+              <button className="adoptBtn" id="generateBirbBtn">Adopt Birb!</button>
+              </div>
+              <h3>Here are all your Birbs!</h3>
+              <h4 className="birbsStats">Click on any birb to view their stats!</h4></div>
+            <div className="square">
+
             </div>
           </div>
         </div>
